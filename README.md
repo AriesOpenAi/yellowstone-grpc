@@ -18,7 +18,7 @@ npm install @triton-one/yellowstone-grpc@1.3.0
 
 ### 基础
 
-0. [创建订阅](./0-sub/)
+0. [创建订阅](./00-sub/)
 1. [订阅格式](./01-format/)
 
 ### 进阶
