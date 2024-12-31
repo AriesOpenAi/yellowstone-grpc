@@ -2,7 +2,7 @@
 
 账户数据的解析方法与[之前的教程](https://github.com/ChainBuff/solana-web3js/tree/main/09-buffer)类似，这要求我们需要提前清楚账户数据的结构，这往往是此账户相关的合约里定义的。
 
-如Raydium USDC/SOL CLMM流动池的账户`8sLbNZoA1cfnvMJLPfp98ZLAnFSYCFApfJKMbiXNLwxj`，其账户数据保存了此流动池当前的状态，数据结构可以在[合约源码](https://github.com/raydium-io/raydium-clmm/blob/678dc67bc7bdbacb8f81889f8237007fde0a0039/programs/amm/src/states/pool.rs#L58)中找到，包括偏移量，字段长度等信息。
+如Raydium WSOL/USDC CLMM流动池的账户`8sLbNZoA1cfnvMJLPfp98ZLAnFSYCFApfJKMbiXNLwxj`，其账户数据保存了此流动池当前的状态，数据结构可以在[合约源码](https://github.com/raydium-io/raydium-clmm/blob/678dc67bc7bdbacb8f81889f8237007fde0a0039/programs/amm/src/states/pool.rs#L58)中找到，包括偏移量，字段长度等信息。
 
 通过如下request，我们可以订阅到此账户的状态变化：
 
@@ -61,7 +61,7 @@ const request: SubscribeRequest = {
 
 在这里，我们主要关心的是`data.account.account.data`部分，这包含了此账户的当前状态。
 
-如需要USDC/SOL流动池价格信息的话，可配合`accountsDataSlice`单独获取此价格字段进行解析，示例如下：
+如需要WSOL/USDC流动池价格信息的话，可配合`accountsDataSlice`单独获取此价格字段进行解析，示例如下：
 
 ```ts
 // 获取订阅数据
