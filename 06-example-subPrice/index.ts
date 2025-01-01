@@ -7,7 +7,6 @@ async function main() {
     // @ts-ignore
     const client = new Client.default(
         "https://test-grpc.chainbuff.com",
-        "http://216.18.204.250:10001",
         undefined,
         {
             "grpc.max_receive_message_length": 128 * 1024 * 1024, // 128MB
