@@ -6,8 +6,7 @@ async function main() {
     // 创建client
     // @ts-ignore
     const client = new Client.default(
-        // "https://test-grpc.chainbuff.com", // fra
-        "http://216.18.204.250:10001", // slc
+        "https://test-grpc.chainbuff.com",
         undefined,
         {
             "grpc.max_receive_message_length": 128 * 1024 * 1024, // 128MB
