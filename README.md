@@ -32,6 +32,7 @@ npm install @triton-one/yellowstone-grpc@1.3.0
 5. [监听钱包](./05-example-subWallet/)
 6. [监听代币价格](./06-example-subPrice/)
 7. [订阅全链数据](./07-example-subBlock/)
+8. [订阅pump交易](./08-example-subPumpSwap/)
 
 ## 参考
 
